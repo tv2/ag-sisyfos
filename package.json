@@ -78,7 +78,7 @@
         "cross-env": "7.0.3"
     },
     "devDependencies": {
-        "concurrently": "8.2.2",
+        "concurrently": "^10.0.6",
         "lint-staged": "15.2.10",
         "prettier": "3.2.4",
         "rimraf": "5.0.5"
