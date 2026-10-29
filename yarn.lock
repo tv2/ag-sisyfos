@@ -3028,26 +3028,26 @@ __metadata:
   linkType: hard
 
 "@types/express-serve-static-core@npm:^4.17.33":
-  version: 4.19.6
-  resolution: "@types/express-serve-static-core@npm:4.19.6"
+  version: 4.19.9
+  resolution: "@types/express-serve-static-core@npm:4.19.9"
   dependencies:
     "@types/node": "npm:*"
     "@types/qs": "npm:*"
     "@types/range-parser": "npm:*"
     "@types/send": "npm:*"
-  checksum: 10c0/4281f4ead71723f376b3ddf64868ae26244d434d9906c101cf8d436d4b5c779d01bd046e4ea0ed1a394d3e402216fabfa22b1fa4dba501061cd7c81c54045983
+  checksum: 10c0/31d7afe63c4f0090159a869e4199aae38cbc222948bf9be5d7c257bfdc8e14c9dec46e9f50c08e0004565565acb7ecd95d5c0dbde6d9fdd45a5d0adfabbf00fe
   languageName: node
   linkType: hard
 
 "@types/express@npm:^4.17.21":
-  version: 4.17.21
-  resolution: "@types/express@npm:4.17.21"
+  version: 4.17.25
+  resolution: "@types/express@npm:4.17.25"
   dependencies:
     "@types/body-parser": "npm:*"
     "@types/express-serve-static-core": "npm:^4.17.33"
     "@types/qs": "npm:*"
-    "@types/serve-static": "npm:*"
-  checksum: 10c0/12e562c4571da50c7d239e117e688dc434db1bac8be55613294762f84fd77fbd0658ccd553c7d3ab02408f385bc93980992369dd30e2ecd2c68c358e6af8fabf
+    "@types/serve-static": "npm:^1"
+  checksum: 10c0/f42b616d2c9dbc50352c820db7de182f64ebbfa8dba6fb6c98e5f8f0e2ef3edde0131719d9dc6874803d25ad9ca2d53471d0fec2fbc60a6003a43d015bab72c4
   languageName: node
   linkType: hard
 
@@ -3331,14 +3331,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/serve-static@npm:*":
-  version: 1.15.7
-  resolution: "@types/serve-static@npm:1.15.7"
+"@types/send@npm:<1":
+  version: 0.17.6
+  resolution: "@types/send@npm:0.17.6"
+  dependencies:
+    "@types/mime": "npm:^1"
+    "@types/node": "npm:*"
+  checksum: 10c0/a9d76797f0637738062f1b974e0fcf3d396a28c5dc18c3f95ecec5dabda82e223afbc2d56a0bca46b6326fd7bb229979916cea40de2270a98128fd94441b87c2
+  languageName: node
+  linkType: hard
+
+"@types/serve-static@npm:^1":
+  version: 1.15.10
+  resolution: "@types/serve-static@npm:1.15.10"
   dependencies:
     "@types/http-errors": "npm:*"
     "@types/node": "npm:*"
-    "@types/send": "npm:*"
-  checksum: 10c0/26ec864d3a626ea627f8b09c122b623499d2221bbf2f470127f4c9ebfe92bd8a6bb5157001372d4c4bd0dd37a1691620217d9dc4df5aa8f779f3fd996b1c60ae
+    "@types/send": "npm:<1"
+  checksum: 10c0/842fca14c9e80468f89b6cea361773f2dcd685d4616a9f59013b55e1e83f536e4c93d6d8e3ba5072d40c4e7e64085210edd6646b15d538ded94512940a23021f
   languageName: node
   linkType: hard
 
@@ -4508,7 +4518,14 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.1, chalk@npm:^4.1.2":
+"chalk@npm:5.6.2":
+  version: 5.6.2
+  resolution: "chalk@npm:5.6.2"
+  checksum: 10c0/99a4b0f0e7991796b1e7e3f52dceb9137cae2a9dfc8fc0784a550dc4c558e15ab32ed70b14b21b52beb2679b4892b41a0aa44249bcb996f01e125d58477c6976
+  languageName: node
+  linkType: hard
+
+"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.1":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -4702,6 +4719,17 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
+"cliui@npm:^9.0.1":
+  version: 9.0.1
+  resolution: "cliui@npm:9.0.1"
+  dependencies:
+    string-width: "npm:^7.2.0"
+    strip-ansi: "npm:^7.1.0"
+    wrap-ansi: "npm:^9.0.0"
+  checksum: 10c0/13441832e9efe7c7a76bd2b8e683555c478d461a9f249dc5db9b17fe8d4b47fa9277b503914b90bd00e4a151abb6b9b02b2288972ffe2e5e3ca40bcb1c2330d3
+  languageName: node
+  linkType: hard
+
 "clone-deep@npm:^4.0.1":
   version: 4.0.1
   resolution: "clone-deep@npm:4.0.1"
@@ -4882,23 +4910,20 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"concurrently@npm:8.2.2":
-  version: 8.2.2
-  resolution: "concurrently@npm:8.2.2"
+"concurrently@npm:^10.0.6":
+  version: 10.0.6
+  resolution: "concurrently@npm:10.0.6"
   dependencies:
-    chalk: "npm:^4.1.2"
-    date-fns: "npm:^2.30.0"
-    lodash: "npm:^4.17.21"
-    rxjs: "npm:^7.8.1"
-    shell-quote: "npm:^1.8.1"
-    spawn-command: "npm:0.0.2"
-    supports-color: "npm:^8.1.1"
-    tree-kill: "npm:^1.2.2"
-    yargs: "npm:^17.7.2"
+    chalk: "npm:5.6.2"
+    rxjs: "npm:7.8.2"
+    shell-quote: "npm:1.12.0"
+    supports-color: "npm:10.2.2"
+    tree-kill: "npm:1.2.2"
+    yargs: "npm:18.0.0"
   bin:
-    conc: dist/bin/concurrently.js
-    concurrently: dist/bin/concurrently.js
-  checksum: 10c0/0e9683196fe9c071d944345d21d8f34aa6c0cc50c0dd897e95619f2f1c9eb4871dca851b2569da17888235b7335b4c821ca19deed35bebcd9a131ee5d247f34c
+    conc: dist/bin/index.js
+    concurrently: dist/bin/index.js
+  checksum: 10c0/08b03d53f81c0e159ac92f80005a04ed9c970b6ed4875e99fbf27f4a2f3ae142b83a76cc30580c8c9f4d75942b501cba2c6f8ae433709e045efbaa5f8faeb743
   languageName: node
   linkType: hard
 
@@ -5284,15 +5309,6 @@ asn1@evs-broadcast/node-asn1:
   version: 1.0.3
   resolution: "cycle@npm:1.0.3"
   checksum: 10c0/f38aae412cea9e895e963e0ff8d4d19852e53b630e7fc1dd078da551f3a4c0a98c5f026d4626dfc0b42648b804dabf13a56faace60b09cf6f3cc706c0819f119
-  languageName: node
-  linkType: hard
-
-"date-fns@npm:^2.30.0":
-  version: 2.30.0
-  resolution: "date-fns@npm:2.30.0"
-  dependencies:
-    "@babel/runtime": "npm:^7.21.0"
-  checksum: 10c0/e4b521fbf22bc8c3db332bbfb7b094fd3e7627de0259a9d17c7551e2d2702608a7307a449206065916538e384f37b181565447ce2637ae09828427aed9cb5581
   languageName: node
   linkType: hard
 
@@ -5794,9 +5810,9 @@ asn1@evs-broadcast/node-asn1:
   linkType: hard
 
 "encodeurl@npm:~2.0.0":
-  version: 2.0.0
-  resolution: "encodeurl@npm:2.0.0"
-  checksum: 10c0/5d317306acb13e6590e28e27924c754163946a2480de11865c991a3a7eed4315cd3fba378b543ca145829569eefe9b899f3d84bb09870f675ae60bc924b01ceb
+  version: 2.0.1
+  resolution: "encodeurl@npm:2.0.1"
+  checksum: 10c0/b592ab79be68b052e8364dbc0f7faf71ed5a64ff6d8771cda7004dbea8dc4084de9c314b21220dc2566f5f1373e280e0b72c297b535177db3c0753620f1059ca
   languageName: node
   linkType: hard
 
@@ -6169,7 +6185,7 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"express@npm:^4.18.2":
+"express@npm:^4.22.3":
   version: 4.22.3
   resolution: "express@npm:4.22.3"
   dependencies:
@@ -9224,7 +9240,7 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"path-to-regexp@npm:0.1.13":
+"path-to-regexp@npm:~0.1.13":
   version: 0.1.13
   resolution: "path-to-regexp@npm:0.1.13"
   checksum: 10c0/1cae3921739c154a8926e136185a10c916f79a249b9072a5001b266d96e193860ca03867e8e8cc808b786862d750f427ed93686bc259355442c3407a62deab1a
@@ -10561,12 +10577,12 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.8.1":
-  version: 7.8.1
-  resolution: "rxjs@npm:7.8.1"
+"rxjs@npm:7.8.2":
+  version: 7.8.2
+  resolution: "rxjs@npm:7.8.2"
   dependencies:
     tslib: "npm:^2.1.0"
-  checksum: 10c0/3c49c1ecd66170b175c9cacf5cef67f8914dcbc7cd0162855538d365c83fea631167cacb644b3ce533b2ea0e9a4d0b12175186985f89d75abe73dbd8f7f06f68
+  checksum: 10c0/1fcd33d2066ada98ba8f21fcbbcaee9f0b271de1d38dc7f4e256bfbc6ffcdde68c8bfb69093de7eeb46f24b1fb820620bf0223706cff26b4ab99a7ff7b2e2c45
   languageName: node
   linkType: hard
 
@@ -10777,7 +10793,7 @@ asn1@evs-broadcast/node-asn1:
     atem-connection: "npm:^3.4.0"
     casparcg-connection: "npm:^5.1.0"
     emberplus-connection: "npm:^0.3.0"
-    express: "npm:^4.18.2"
+    express: "npm:^4.22.3"
     jest: "npm:^29.7.0"
     node-emberplus: "npm:^3.0.8"
     node-vmix: "patch:node-vmix@https%3A//github.com/tv2norge-collab/node-vmix.git%23commit=777c0eb25427fab4b09218d736e78e416e8b4fec#~/.yarn/patches/node-vmix-https-b566bcb416.patch"
@@ -10827,10 +10843,10 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"shell-quote@npm:^1.8.1":
-  version: 1.8.2
-  resolution: "shell-quote@npm:1.8.2"
-  checksum: 10c0/85fdd44f2ad76e723d34eb72c753f04d847ab64e9f1f10677e3f518d0e5b0752a176fd805297b30bb8c3a1556ebe6e77d2288dbd7b7b0110c7e941e9e9c20ce1
+"shell-quote@npm:1.12.0":
+  version: 1.12.0
+  resolution: "shell-quote@npm:1.12.0"
+  checksum: 10c0/1605a4ed6a758bf13de7cb8197a4184d8015f7a4dbdcd6cd4a717d5b30b3ae7666300cc4ae7f3155cf80ace9739e9e82061ee5aa1a648f53f5fab31a220816d0
   languageName: node
   linkType: hard
 
@@ -10908,7 +10924,7 @@ asn1@evs-broadcast/node-asn1:
   resolution: "sisyfos-audio-controller@workspace:."
   dependencies:
     "@reduxjs/toolkit": "npm:2.1.0"
-    concurrently: "npm:8.2.2"
+    concurrently: "npm:^10.0.6"
     cross-env: "npm:7.0.3"
     lint-staged: "npm:15.2.10"
     prettier: "npm:3.2.4"
@@ -11152,13 +11168,6 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"spawn-command@npm:0.0.2":
-  version: 0.0.2
-  resolution: "spawn-command@npm:0.0.2"
-  checksum: 10c0/b22f2d71239e6e628a400831861ba747750bbb40c0a53323754cf7b84330b73d81e40ff1f9055e6d1971818679510208a9302e13d9ff3b32feb67e74d7a1b3ef
-  languageName: node
-  linkType: hard
-
 "sprintf-js@npm:^1.1.2":
   version: 1.1.3
   resolution: "sprintf-js@npm:1.1.3"
@@ -11263,7 +11272,7 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"string-width@npm:^7.0.0":
+"string-width@npm:^7.0.0, string-width@npm:^7.2.0":
   version: 7.2.0
   resolution: "string-width@npm:7.2.0"
   dependencies:
@@ -11380,6 +11389,13 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
+"supports-color@npm:10.2.2":
+  version: 10.2.2
+  resolution: "supports-color@npm:10.2.2"
+  checksum: 10c0/fb28dd7e0cdf80afb3f2a41df5e068d60c8b4f97f7140de2eaed5b42e075d82a0e980b20a2c0efd2b6d73cfacb55555285d8cc719fa0472220715aefeaa1da7c
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^7.1.0":
   version: 7.2.0
   resolution: "supports-color@npm:7.2.0"
@@ -11389,7 +11405,7 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^8.0.0, supports-color@npm:^8.1.1":
+"supports-color@npm:^8.0.0":
   version: 8.1.1
   resolution: "supports-color@npm:8.1.1"
   dependencies:
@@ -11588,7 +11604,7 @@ asn1@evs-broadcast/node-asn1:
   languageName: node
   linkType: hard
 
-"tree-kill@npm:^1.2.2":
+"tree-kill@npm:1.2.2":
   version: 1.2.2
   resolution: "tree-kill@npm:1.2.2"
   bin:
@@ -12457,6 +12473,27 @@ asn1@evs-broadcast/node-asn1:
   version: 21.1.1
   resolution: "yargs-parser@npm:21.1.1"
   checksum: 10c0/f84b5e48169479d2f402239c59f084cfd1c3acc197a05c59b98bab067452e6b3ea46d4dd8ba2985ba7b3d32a343d77df0debd6b343e5dae3da2aab2cdf5886b2
+  languageName: node
+  linkType: hard
+
+"yargs-parser@npm:^22.0.0":
+  version: 22.0.0
+  resolution: "yargs-parser@npm:22.0.0"
+  checksum: 10c0/cb7ef81759c4271cb1d96b9351dbbc9a9ce35d3e1122d2b739bf6c432603824fa02c67cc12dcef6ea80283379d63495686e8f41cc7b06c6576e792aba4d33e1c
+  languageName: node
+  linkType: hard
+
+"yargs@npm:18.0.0":
+  version: 18.0.0
+  resolution: "yargs@npm:18.0.0"
+  dependencies:
+    cliui: "npm:^9.0.1"
+    escalade: "npm:^3.1.1"
+    get-caller-file: "npm:^2.0.5"
+    string-width: "npm:^7.2.0"
+    y18n: "npm:^5.0.5"
+    yargs-parser: "npm:^22.0.0"
+  checksum: 10c0/bf290e4723876ea9c638c786a5c42ac28e03c9ca2325e1424bf43b94e5876456292d3ed905b853ebbba6daf43ed29e772ac2a6b3c5fb1b16533245d6211778f3
   languageName: node
   linkType: hard
 
