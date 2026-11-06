@@ -32,5 +32,8 @@
         "tsx": "^4.19.2",
         "typescript": "^5.7.2",
         "vite": "^6.0.5"
+    },
+    "resolutions": {
+        "proxy-addr": "2.0.8"
     }
 }
