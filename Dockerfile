@@ -24,7 +24,7 @@ RUN corepack prepare yarn@4.1.0 --activate
 # Run as non-root user
 USER 1000
 WORKDIR /opt/sisyfos-audio-controller
-COPY --from=build /opt/sisyfos-audio-controller .
+COPY --from=build --chown=1000:1000 /opt/sisyfos-audio-controller .
 
 EXPOSE 1176/tcp
 EXPOSE 1176/udp
@@ -34,4 +34,4 @@ ENV NODE_ENV=production
 ENV LOG_LEVEL=info
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD ["node", "server/dist/server"]
+CMD ["node", "server/dist/index.js"]
