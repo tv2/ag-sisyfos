@@ -4,7 +4,7 @@
     "description": "Standalone mock audio mixer with WebSocket control API and Web UI",
     "license": "MIT",
     "engines": {
-        "node": ">=24"
+        "node": ">=24.22.1"
     },
     "scripts": {
         "dev": "concurrently \"tsx watch src/index.ts\" \"vite --config ui/vite.config.ts\"",
